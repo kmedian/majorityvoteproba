@@ -12,10 +12,12 @@ def majority_vote_proba(x):
     y = np.ones(shape=vote.shape, dtype=np.float16) * .5
 
     # set x<0.5 to zero and add sum(x-0.5)/n
-    y += np.maximum(0, x - .5).mean(axis=1) * vote
+    x0 = (x - .5).astype(np.float16)
+    y += np.maximum(0, x0).mean(axis=1) * vote
 
     # set x>=0.5 to zero and add sum(x-0.5)/n
-    y += np.minimum(0, x - .5).mean(axis=1) * ~vote
+    y += np.minimum(0, x0).mean(axis=1) * ~vote
+    del x0
 
     # done
     return y, vote.astype(np.uint8), cnt
