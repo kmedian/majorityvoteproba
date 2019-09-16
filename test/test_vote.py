@@ -1,7 +1,7 @@
 import unittest
 from majority_vote_proba_fn import majority_vote_proba
 import numpy as np
-#import numpy.testing as npt   # assert_almost_equal
+# import numpy.testing as npt   # assert_almost_equal
 
 
 class Test_Vote(unittest.TestCase):
