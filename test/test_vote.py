@@ -9,14 +9,14 @@ class Test_Vote(unittest.TestCase):
     def test1(self):
         x = np.array([[0.49, 0.6, 0.6]])
         y, vote, cnt = majority_vote_proba(x)
-        self.assertEquals(y, 0.5666666666666667)  # .5+.2/3
+        self.assertAlmostEqual(float(y), 0.566666666666666)  # .5+.2/3
         self.assertEquals(vote, 1)
         self.assertEquals(cnt, 2)
 
     def test2(self):
         x = np.array([[0.4, 0.4, 0.5]])
         y, vote, cnt = majority_vote_proba(x)
-        self.assertEquals(y, 0.43333333333333335)  # .5-.2/3
+        self.assertAlmostEqual(float(y), 0.4333333333333333)  # .5-.2/3
         self.assertEquals(vote, 0)
         self.assertEquals(cnt, 1)
 

@@ -9,10 +9,10 @@ def majority_vote_proba(x):
     vote = cnt > int(x.shape[1] / 2)
 
     # initialize proba y
-    y = np.ones(shape=vote.shape, dtype=np.float16) * .5
+    y = np.ones(shape=vote.shape, dtype=np.float64) * .5
 
     # set x<0.5 to zero and add sum(x-0.5)/n
-    x0 = (x - .5).astype(np.float16)
+    x0 = (x - .5).astype(np.float64)
     y += np.maximum(0, x0).mean(axis=1) * vote
 
     # set x>=0.5 to zero and add sum(x-0.5)/n
