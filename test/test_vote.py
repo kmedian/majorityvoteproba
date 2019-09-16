@@ -1,5 +1,5 @@
 import unittest
-from majority_vote_proba_fn import majority_vote_proba
+from majorityvoteproba import majority_vote_proba
 import numpy as np
 # import numpy.testing as npt   # assert_almost_equal
 
