@@ -8,7 +8,7 @@ def read(fname):
 
 setup(name='majorityvoteproba',
       version='0.1.0',
-      description='',
+      description='merge probability predictions for majority votes',
       long_description=read('README.md'),
       long_description_content_type='text/markdown',
       url='http://github.com/kmedian/majorityvoteproba',
